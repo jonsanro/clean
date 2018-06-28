@@ -73,9 +73,23 @@ section .content-wrapper {
     margin-left: auto;
     margin-right: auto;
 }
+
+
+/*Elementos iniciales: Header y Nav*/
+
+
 body>header, nav {
-    border: 1px solid black;
-    width: 40%;
+    color: var(--color-fondo);
+    }
+
+body>nav {
+	position: absolute;
+	z-index: 1;
+	right: 20%;
+	top: 1rem;
+	font-weight: 800;
+	font-size: 0.75rem;
+	text-transform: uppercase;
 }
 
 nav li {
@@ -86,3 +100,48 @@ nav a {
     padding: .5rem 1rem;
 }
 
+body>header {
+	position: absolute;
+	z-index: 1;
+	top:1rem;
+	left: 20%;
+}
+
+
+/*Cabecera 
+	MENÚ y HEADER*/
+
+
+section .title-wrapper{
+	position:absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	
+}	
+
+section header::after {
+	content: "";
+	position:absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--color-texto);
+	opacity: 0.2;
+	
+}
+
+/*POST FULL*/
+
+figure.imagen{
+	width: 40%;
+	float: right;
+}
+
+div.columnas{
+	column-count:2;
+	column-gap: 2rem;
+}
