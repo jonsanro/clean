@@ -20,16 +20,16 @@ body{
 }
 
 .table_wrapper {
-	display: table;
-	width: 100%;
+    display:table;
+    width: 100%;
 }
 
-nav, aside{
-	width: 40%;
-	diaplay: table-cell;
+nav, aside {
+    width: 20%;
+    display: table-cell;
+}
+main {
+    width: 60%;
+    display: table-cell;
 }
 
-main{
-	width: 60%;
-	display: table-cell;
-}

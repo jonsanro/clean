@@ -19,16 +19,15 @@ body{
     min-height: 10vh;
 }
 
-nav, aside{
-	width: 20%;
-	float: left;
+nav, aside {
+    width: 20%;
+    float: left;
+}
+main {
+    width: 60%;
+    float: left;
 }
 
-main{
-	width: 60%;
-	float: left;
-}
-
-.clearfix{
+.clearfix {
 	clear: both;
 }

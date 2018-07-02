@@ -19,17 +19,18 @@ body{
     min-height: 10vh;
 }
 
-.flex_wrapper {
-	display: flex;
-	align-items: stretch;
-	
+ .flex_wrapper {
+    display:flex;
+    /* flex-direction: column;
+    justify-content: space-around;
+    align-items: center; */
 }
 
-nav, aside{
-	flex: 1 1 20%;
 
+nav, aside {
+    flex: 1 1 20%;
 }
+main {
+     flex: 1 1 60%;
+} 
 
-main{
-	flex: 1 1 60%;
-}
