@@ -12,5 +12,5 @@ class PersonaTS {
     }
 }
 
-let oJuan = new Persona('Juan', 33)
+let oJuan = new PersonaTS('Juan', 33)
 oJuan.saludar()
