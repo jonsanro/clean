@@ -5,22 +5,21 @@ function normal() {
 // normal()
 
 oPrueba = {
-    nombre: 'Prueba',
-    probar: function() { console.log(this) }
+    nombre : 'Prueba',
+    probar : function () {console.log(this)}
 }
 
-//Inconsistencia del this
+// Inconsistencia del this
 
-//this se refiere al objeto
+// this se refiere al objeto
 oPrueba.probar()
 
-//this se refiere al process
+// this se refiere a process
 setTimeout(
     oPrueba.probar, 1000
 )
 
+// soluciones
 
-//Soluciones
 setTimeout(
-    function() { oPrueba.probar() }, 2000
-)
+    function () {oPrueba.probar()}, 2000)

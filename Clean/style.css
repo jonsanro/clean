@@ -48,12 +48,15 @@ article p {
 }
 
 /* Elementos iniciales: Header y Nav*/
-
 body>header, body>nav {
     color: var(--color-fondo);
 }
 
-body>nav {
+nav.menu-top {
+    display: none;
+}
+
+nav.menu-top,  nav.menu-icon {
     position: absolute;
     z-index: 1;
     right: 20%;
@@ -61,9 +64,9 @@ body>nav {
     font-weight: 800;
     font-size: 0.75rem;
     text-transform: uppercase;
-    
 }
-nav li {
+
+nav.menu-top li, footer nav li {
     display: inline-block;
 }
 nav a {
@@ -72,13 +75,13 @@ nav a {
     transition: all 0.8s linear;
 }
 
-body>nav a:hover {
-    color: antiquewhite;
-    background-color: var(--color-autores);
-    transform: scale(1.2);
-  }
+nav.menu-icon {
+    font-size: 1.2rem;
+}
 
-
+nav.menu-bottom {
+    background-color: var(--color-autores)
+}
 body>header {
     position: absolute;
     z-index: 1;
@@ -135,13 +138,13 @@ section header::after {
     opacity: 0.5;
 }
 
-section .content-wrapper {
-    width: 75%;
-    max-width: 40rem;
+section .content-wrapper, nav.content-wrapper {
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
 }
+
 
 /* Botones*/
 
@@ -168,6 +171,8 @@ section .boton {
 
 section#home header h1 {
     font-size: 0.2rem;
+    margin-bottom: 2rem; 
+    display: inline-block;
     animation: titulo 3s linear;
     animation-fill-mode: forwards;
 }
@@ -247,11 +252,12 @@ section#contact li {
     
 }
 
-section#contact label {
+section#contact li.form-group label {
     display: none;
 }
 
-section#contact input, section#contact textarea {
+section#contact li.form-group input, 
+section#contact li.form-group textarea {
     width: 100%;
     border: 0px solid;
     font-size: 1.5rem;
@@ -262,7 +268,7 @@ section#contact input, section#contact textarea {
 
 /* POST FULL*/
 
-section#full_post h1, p, footer {
+section#full_post h1, section#full_post p, section#full_post footer {
     text-align: left;
     margin-bottom: 1rem;
 }
@@ -293,3 +299,33 @@ body>footer nav {
 body>footer small {
     color: var(--color-autores);
 }
+
+@media screen and (min-width: 900px) {
+
+    nav.menu-icon, nav.menu-bottom {
+        display: none;
+    }
+
+    nav.menu-top {
+        display: block;
+        position: fixed;
+        background-color: var(--color-autores)
+    }
+    
+    body>nav a:hover {
+        color: antiquewhite;
+        background-color: var(--color-autores);
+        transform: scale(1.2);
+      }
+
+    section .content-wrapper, nav.content-wrapper {
+        width: 75%;
+        max-width: 40rem;
+        margin-top: 2rem;
+    }
+
+    .active {
+        color:maroon;
+    }
+}
+
